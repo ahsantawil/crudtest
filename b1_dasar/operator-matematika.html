@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator Matematika</title>
+</head>
+<body>
+    
+    <script>
+
+        // Operator matematika
+        let result = 1 + 2 ; // 3
+        document.writeln("<p> 1 + 2 = " + result + "</p>");
+        let originalResult = result; // 3
+
+        result = result - 1;
+        document.writeln("<p>" + originalResult + " - 1 = " + result + "</p>");
+        originalResult = result; // 2
+
+        result = result * 2;
+        document.writeln("<p>"+ originalResult + " * 2 = " + result + "</p>");
+        originalResult = result; // 4
+
+        // Operator Augmented Assignments
+        
+        let hasil = 10;
+        hasil += 10;
+        document.writeln("<p>" + hasil +"</p>");
+
+        hasil -= 10;
+        document.writeln("<p>"+ hasil + "</p>");
+
+        hasil *= 10;
+        document.writeln("<p>" + hasil + "</p>");
+
+        // Operator Unary
+
+        let operator = +1;
+        document.writeln("<p>"+ operator + "</p>");
+        
+        operator --;
+        document.writeln("<p>"+ operator + "</p>");
+
+        operator++;
+        document.writeln("<p>"+ operator + "</p>");
+
+        operator = -operator;
+        document.writeln("<p>"+ operator + "</p>");
+    </script>
+
+</body>
+</html>

@@ -8,7 +8,30 @@
 </head>
 <body>
     <script>
+        // Error Mengakses Property Nullish
+
+        /* 
+        let person = {};
+
+        alert(person.address.country);
+
+        alert("Hello");
+        */
         
+        // Pengecekan menggunakan IF
+        let person = {};
+
+        let say;
+        if (person.address !== undefined && person.address !== null) {
+            say = person.address.country;
+        }
+
+        alert(say);
+
+        // Menggunakan optional chaining
+        const human = {};
+        console.log(person?.address?.country);
+
     </script>
 </body>
 </html>

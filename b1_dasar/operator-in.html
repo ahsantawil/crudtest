@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operator IN</title>
+</head>
+<body>
+    <script>
+
+        // kode In Operator pada object
+        const person = {
+            firstName : "Ahsan",
+            lastName : "Ta'wil"
+        };
+
+        const result = "firstName" in person; // true
+        console.log(`${result}`);
+
+        if ("firstName" in person) {
+            alert(`Hello ${person.firstName}`);
+        } else {
+            alert("Hello");
+        }
+
+
+        // In Operator Undefined / Null property
+        const namesPerson = {
+            fullName : undefined
+        };
+
+        const Result = "fullName" in namesPerson; // true
+        console.log("--------------")
+        console.log(`${Result}`);
+
+        const names = [null, "Tawil", null];
+        const namesResult = 0 in names; // true
+        console.log(`${namesResult}`);
+
+    </script>
+</body>
+</html>

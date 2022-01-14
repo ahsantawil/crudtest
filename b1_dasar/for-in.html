@@ -8,7 +8,24 @@
 </head>
 <body>
     <script>
-        
+        // FOr in di object
+
+        const person = {
+            firstName : "Ahsan",
+            middleName : " ",
+            lastName : "Ta'wil"
+        };
+
+        for (const property in person) {
+            document.writeln(`<p> Property ${property} : ${person[property]} </p>`);
+        }
+
+        // For In di Array
+        const names = ["Ahsan", " ", "Ta'wil"];
+
+        for (const index in names) {
+            document.writeln(`<p> Index ${index} : ${names[index]} </p>`);
+        }
     </script>
 </body>
 </html>

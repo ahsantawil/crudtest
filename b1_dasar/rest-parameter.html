@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rest Parameter</title>
+</head>
+<body>
+    <script>
+        // Kode Rest Parameter
+        function sum(name, ...data){
+            let total = 0;
+            for (const item of data) {
+                total += item;
+            }
+            console.log(`Total ${name} is ${total}`);
+        }
+
+        sum('Rest Parameter fruites Orange', 2, 3, 4, 5, 6, 7, 8); // Total Orange is 35
+        sum('Rest Parameter fruites Apple', 5, 5, 6, 7, 5, 6); // Total Apple is 34
+        sum('Rest Parameter fruites Banana', 9, 5, 2, 3, 4); // Total Banana is 23
+        
+        // Spread Syntax di rest parameter
+        const values = [10, 12, 13, 70, 67, 10];
+        sum('Spread syntax - Fruite Guava', ...values);
+
+        // Arguments Object
+        function oldSum(){
+            let total = 0;
+            for (const item of arguments) {
+                total += item;
+            }
+            console.log(`Arguments Total is ${total}`);
+        }
+
+        oldSum( 2, 3, 23, 23, 23123, 3423);
+    </script>
+</body>
+</html>

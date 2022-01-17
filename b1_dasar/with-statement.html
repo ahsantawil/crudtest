@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>With Statement</title>
+</head>
+<body>
+    <script>
+        // Tanpa With Statement
+
+        const person = {
+            firstName : "Ahsan",
+            lastName : "Ta'wil"
+        };
+
+        console.log(person.firstName);
+        console.log(person.lastName);
+
+        console.log("-----------")
+        // kode dengan With Statement
+
+        with(person){
+            console.log(firstName);
+            console.log(lastName);
+        }
+
+        console.log("--------------")
+        // Kode : Ambigu di With Statement
+        const firstName = "Alzahwa";
+        const lastName = "Dohwa";
+
+        with(person){
+            console.log(firstName);
+            console.log(lastName);
+        }
+
+    </script>
+</body>
+</html>

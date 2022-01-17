@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Label</title>
+</head>
+<body>
+    <script>
+        // Label
+        loopa:
+        for (let a = 0; a < 100; a++) {
+            loopb:
+            for (let b = 0; b < 10; b++) {
+                console.log(`${a} - ${b}`);
+                document.wrateln(`<p>${a} - ${b}</p>`);
+            }
+        }
+
+        // continue or break dilabel
+
+        loopi:
+        for (let i = 0; i < 10; i++) {
+            loopj:
+            for (let j = 0; j < 100; j++) {
+                if (j > 10) {
+                    continue loopi;
+                }
+                document.writeln(`<p> ${i} - ${j}</p>`);
+            }
+        }
+    </script>
+</body>
+</html>

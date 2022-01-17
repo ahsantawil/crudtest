@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope</title>
+</head>
+<body>
+    <script>
+        // Global Scope
+        let counter = 0;
+
+        function hitMe(){
+            // local scope function hitMe
+            counter++; // we can access
+        }
+
+        hitMe();
+        hitMe();
+
+        console.log(counter);
+
+        // Local Scope
+        function first(){
+            let firstVariable = "First" ;
+            console.log(`${firstVariable}`);
+        }
+        
+        function second(){
+            let secondVariable = "Second";
+            console.log(`${secondVariable}`);
+        }
+
+        first();
+        second();
+
+        // console.log(firstVariable); // cannot access local scope
+        // console.log(secondVariable); // cannot access local scope
+
+        // Nested function scope
+        function two(){
+            let twoVariable = "Two";
+
+            function three(){
+                console.log(twoVariable); //can access local scope first function
+            }
+
+            three();
+        }
+
+        two();
+    </script>
+</body>
+</html>

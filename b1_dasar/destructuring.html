@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructring</title>
+</head>
+<body>
+    <script>
+        // Kode : memanggil data di array
+        {
+
+            const names = ["Alzahwa", "Dohwa", "Muna"];
+            const firstName1 = names[0];
+            const middleName2 = names[1];
+            const lastName3 = names[2];
+    
+            console.log(firstName1);
+            console.log(middleName2);
+            console.log(lastName3);
+
+        }
+        console.log("=========================")
+
+        // Kode : Destructering array
+        {
+
+            const name = ["Alzahwa", "Dohwa", "Muna", "Ahsan", "Ta'wil"];
+            const [firstName, middleName, lastName, ...others] = name;
+    
+            console.log(firstName);
+            console.log(middleName);
+            console.log(lastName);
+            console.log(others);
+
+        }
+        console.log("=========================")
+        
+        //Mengambil data di Object
+        {
+
+            const person = {
+                namaDepan: "Ahsan",
+                namaBelakang : "Tawil",
+                alamat : {
+                    street: "Jl Sabi bangkonol",
+                    city : "Pandeglang",
+                    country: "Indonesia"
+                },
+                hobby : "Rebahan",
+                channel : "ahsantawil"
+            };
+    
+            const data1 = person.namaDepan;
+            const data2 = person.namaBelakang;
+    
+            // Destructering Object
+                /*
+            const { namaDepan, namaBelakang, alamat, ...lainLain } = person;
+            console.log(namaDepan);
+            console.log(namaBelakang);
+            console.log(alamat);
+            console.log(lainLain);
+                */
+            
+            // Kode : Destructering Nested Object
+            const { namaDepan, namaBelakang, alamat: {country, city, street}, ...lainLain } = person;
+            console.log(namaDepan);
+            console.log(namaBelakang);
+            console.log(country);
+            console.log(city);
+            console.log(street);
+            console.log(lainLain);
+        
+        }
+
+        console.log("===================")
+        // Destructuring Function Parameter (1)
+        {
+
+            function displayPerson({ firstName, middleName, lastName}) {
+                console.log(firstName);
+                console.log(middleName);
+                console.log(lastName);
+            }
+    
+            const person1 = {
+                firstName: "Alzahwa",
+                middleName: "Dohwa",
+                lastName : "Muna"
+            };
+
+            displayPerson(person1);
+
+        }
+
+
+        // Kode : Destructuring di Function Parameter (2)
+        {
+            function sum([first, second]) {
+            return first + second;
+            }
+
+            console.log(sum([10, 10]));
+            console.log(sum([20, 10]));
+
+            // Kode : Default Value Destructuring Array
+            const nama = ["Ahsan", "Ta'wil"];
+            const [nameDepan, nameTengah, nameBelakang = "Muna" ] = nama;
+
+            console.log(nameDepan);
+            console.log(nameTengah);
+            console.log(nameBelakang);
+        
+        }
+
+        console.log("=================")
+        // Kode : Default Value Destructuring Object
+        {
+
+            const person2 = {
+                NamaDepan : "Ahsan",
+                NamaBelakang: "Ta'wil"
+            };
+    
+            const {NamaDepan, NamaTengah = "null" , NamaBelakang} = person2;
+            console.log(NamaDepan);
+            console.log(NamaTengah);
+            console.log(NamaBelakang);
+
+        }
+        console.log("=====================")
+
+        // Kode : Menggunakan Nama Variable Lain
+        {
+            const person ={
+                firstName: "AlZahwa",
+                middleName : "Dohwa",
+                lastName: "Muna"
+            }
+            const {
+                firstName : namaDepan,
+                middleName : namaTengah = "Dohwa",
+                lastName : namaBelakang 
+             } = person;
+
+             console.log(namaDepan);
+             console.log(namaTengah);
+             console.log(namaBelakang);
+        }
+    </script>
+</body>
+</html>

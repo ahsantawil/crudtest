@@ -4,16 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Class</title>
+    <title>Contructor di Class</title>
 </head>
 <body>
     <script>
-        // Membuat Class
+        // Kode : Constructor di Class
         class Person{
-            
+            constructor(name){
+                console.log(`Membuat person ${name}`)
+            }
         }
 
-        const ahsan = new Person();
+        const ahsan = new Person("Ahsan");
         console.log(ahsan);
     </script>
 </body>

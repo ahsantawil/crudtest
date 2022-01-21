@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Method di Contructor Function</title>
+</head>
+<body>
+    <script>
+        // Kode : Method di Constructor Function
+
+        function Person(){
+            this.fisrtName = "";
+            this.lastName = "";
+            this.sayHello = function(name){
+                console.log(`Hello ${name}, My Name is ${this.fisrtName}`);
+            }
+        }
+
+        const ahsan = new Person();
+        ahsan.fisrtName = "Ahsan";
+        ahsan.lastName = "Ta'wil";
+        ahsan.sayHello("Alzahwa")
+
+        console.log(ahsan);
+    </script>
+</body>
+</html>

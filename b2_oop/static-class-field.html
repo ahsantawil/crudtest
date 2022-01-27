@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Static Class Field</title>
+</head>
+<body>
+    <script>
+        // Static Class Field
+
+        class Configuration {
+            static nama = "Belajar Javascript Dasar";
+            static version = 1.0;
+            static author = "Ahsan Tawil";
+        }
+
+        const config = new Configuration();
+        console.log(config);
+
+        Configuration.author = "Ahsan";
+
+        console.log(Configuration.nama);
+        console.log(Configuration.version);
+        console.log(Configuration.author);
+
+    </script>
+</body>
+</html>

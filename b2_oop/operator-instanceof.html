@@ -10,12 +10,42 @@
     <script>
         // Kode : Operator instanceof
         {
+            class Employee {
 
+            }
+
+            class Manager {
+
+            }
+
+            const zahwa = new Employee();
+            const ahsan = new Manager();
+
+            console.log(zahwa instanceof Employee); // true
+            console.log(zahwa instanceof Manager); // false
+            console.log(ahsan instanceof Employee); // false
+            console.log(ahsan instanceof Manager); // true
         }
-
+        console.log("===================================")
         // Kode : Operator instanceof di Inheritance
         {
-            
+            class Employee {
+
+            }
+
+            class Manager extends Employee{
+
+            }
+
+            const zahwa = new Employee();
+            const ahsan = new Manager();
+
+            console.log(zahwa instanceof Employee); // true
+            console.log(zahwa instanceof Manager); // false
+
+            // true karena Manager adalah turunan dari Employee
+            console.log(ahsan instanceof Employee); // true
+            console.log(ahsan instanceof Manager); // true
         }
     </script>
 </body>

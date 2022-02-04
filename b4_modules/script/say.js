@@ -1,8 +1,8 @@
-function sayHello (name) {
+export function sayHello (name) {
     console.log(`Hello ${name}`);
 }
 
-function sayGoodBye (name) {
+export function sayGoodBye (name) {
     console.log(`Goody Bye ${name}`);
 }
 

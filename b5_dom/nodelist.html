@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nodelist</title>
+</head>
+<body>
+    <ul id="menu1">
+        <li id="satu">Satu</li>
+        <li id="dua">Dua</li>
+        <li id="tiga">Tiga</li>
+    </ul>
+
+    <ul id="menu2">
+        <li id="first">Ahsan Ta'wil</li>
+        <li id="second">Euis Mukarromah</li>
+        <li id="third">Alzahwa Dohwa Muna</li>
+    </ul>
+    <script>  
+        // Nodelist  
+        const list = document.querySelectorAll("li");
+        console.log(list);
+
+        const list1 = document.getElementById("menu1").childNodes;
+        console.log(list1);
+
+        const list2 = document.getElementById("menu2").childNodes;
+        console.log(list2);
+    </script>
+</body>
+</html>

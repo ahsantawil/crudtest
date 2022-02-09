@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Node Type</title>
+</head>
+<body>
+
+    Ahsan Ta'wil
+    <!-- Hello world -->
+    <h1>Ahsan</h1>
+    
+    <script>
+        const nodes = document.body.childNodes;
+        nodes.forEach(node => {
+            console.log(`${node} : ${node.nodeType}`);
+        })
+    </script>
+</body>
+</html>

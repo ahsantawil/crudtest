@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Callback</title>
+</head>
+<body>
+    <h1 id="header"></h1>
+    <script>
+
+        // SetTimeout
+        const addElement = () => {
+            const header = document.createElement("h1");
+            header.textContent = "JavaScript Developer";
+
+            document.body.appendChild(header);
+        };
+
+        setTimeout(addElement, 5000);
+
+        // SetInterval
+        const setTime = () => {
+            const header = document.getElementById("header");
+            header.textContent = new Date().toString();
+
+            // document.body.appendChild(header);
+            
+        }
+
+        setInterval(setTime, 1000);
+        console.log("SetInterval")
+    </script>
+</body>
+</html>

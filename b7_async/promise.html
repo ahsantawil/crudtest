@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise</title>
+</head>
+<body>
+    
+    <script>
+        // Create Promise
+        {
+        const promise = new Promise(function (resolve, reject) {
+            const ajax = new XMLHttpRequest();
+                    ajax.open("GET", "api/product.json");
+                    ajax.onload = function () {
+                        if (ajax.status === 200) {
+                            resolve(JSON.parse(ajax.responseText));
+                        } else {
+                            reject(ajax.responseText);
+                        }
+                    }
+
+                    ajax.send();
+        });
+
+        console.log(promise);
+
+        }
+        
+        // ajax with promise
+        function getProduct (){
+            return new Promise(function (resolve, reject) {
+                const ajax = new XMLHttpRequest();
+                    ajax.open("GET", "api/product.json");
+                    ajax.onload = function () {
+                        if (ajax.status === 200) {
+                            resolve(JSON.parse(ajax.responseText));
+                        } else {
+                            reject(ajax.responseText);
+                        }
+                    }
+
+                    ajax.send();
+            })
+        }
+
+        getProduct();
+
+    </script>
+</body>
+</html>

@@ -7,9 +7,17 @@
     <title>Web Worker</title>
 </head>
 <body>
-    
+    <button id="buttonTask"> Click here</button>
     <script>
         
+        const worker = new Worker("server.js");
+        worker.addEventListener("message", function (message) {
+            console.log(message.data);
+        });
+
+        document.getElementById("buttonTask").onclick = function () {
+            worker.postMessage(100000);
+        }
     </script>
 </body>
 </html>
